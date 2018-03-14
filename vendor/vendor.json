@@ -1,0 +1,244 @@
+{
+	"comment": "",
+	"ignore": "test",
+	"package": [
+		{
+			"checksumSHA1": "HgTRMamftskFy9Sr3QqtDopwyU0=",
+			"path": "github.com/asuleymanov/golos-go",
+			"revision": "4a1e8d1c7a6e2009831ea7959b5db4e54ce30764",
+			"revisionTime": "2018-03-13T15:53:45Z"
+		},
+		{
+			"checksumSHA1": "16r0AbcaakufOD+3zpTfh+o12yI=",
+			"path": "github.com/asuleymanov/golos-go/apis/database",
+			"revision": "4a1e8d1c7a6e2009831ea7959b5db4e54ce30764",
+			"revisionTime": "2018-03-13T15:53:45Z"
+		},
+		{
+			"checksumSHA1": "3LaroVRMoRL7yn5+wtTtxbvTb50=",
+			"path": "github.com/asuleymanov/golos-go/apis/follow",
+			"revision": "4a1e8d1c7a6e2009831ea7959b5db4e54ce30764",
+			"revisionTime": "2018-03-13T15:53:45Z"
+		},
+		{
+			"checksumSHA1": "C8c4wJocPBM2pge0SBkyoVhvS0s=",
+			"path": "github.com/asuleymanov/golos-go/apis/market",
+			"revision": "4a1e8d1c7a6e2009831ea7959b5db4e54ce30764",
+			"revisionTime": "2018-03-13T15:53:45Z"
+		},
+		{
+			"checksumSHA1": "yZIA/21nkFAWDtoM0sSl5nE7bQc=",
+			"path": "github.com/asuleymanov/golos-go/apis/networkbroadcast",
+			"revision": "4a1e8d1c7a6e2009831ea7959b5db4e54ce30764",
+			"revisionTime": "2018-03-13T15:53:45Z"
+		},
+		{
+			"checksumSHA1": "J/nud0Y4kIKK00zTtcjyDxVyrjk=",
+			"path": "github.com/asuleymanov/golos-go/encoding/transaction",
+			"revision": "4a1e8d1c7a6e2009831ea7959b5db4e54ce30764",
+			"revisionTime": "2018-03-13T15:53:45Z"
+		},
+		{
+			"checksumSHA1": "Tj+ttxaLeQjzZlxopvYcjhISN6I=",
+			"path": "github.com/asuleymanov/golos-go/encoding/wif",
+			"revision": "4a1e8d1c7a6e2009831ea7959b5db4e54ce30764",
+			"revisionTime": "2018-03-13T15:53:45Z"
+		},
+		{
+			"checksumSHA1": "iwZhtYVAHtKHsDJjBa356eqixxA=",
+			"path": "github.com/asuleymanov/golos-go/internal/rpc",
+			"revision": "4a1e8d1c7a6e2009831ea7959b5db4e54ce30764",
+			"revisionTime": "2018-03-13T15:53:45Z"
+		},
+		{
+			"checksumSHA1": "Y6jSps6suxogun9aiBgLQ8IxUWA=",
+			"path": "github.com/asuleymanov/golos-go/rfc6979",
+			"revision": "4a1e8d1c7a6e2009831ea7959b5db4e54ce30764",
+			"revisionTime": "2018-03-13T15:53:45Z"
+		},
+		{
+			"checksumSHA1": "nDz9pQOVD2sUI2iBuLxNohVq81o=",
+			"path": "github.com/asuleymanov/golos-go/transactions",
+			"revision": "4a1e8d1c7a6e2009831ea7959b5db4e54ce30764",
+			"revisionTime": "2018-03-13T15:53:45Z"
+		},
+		{
+			"checksumSHA1": "9qG+7Gkjz+OUWbg+pB7qT1dZ/hY=",
+			"path": "github.com/asuleymanov/golos-go/translit",
+			"revision": "4a1e8d1c7a6e2009831ea7959b5db4e54ce30764",
+			"revisionTime": "2018-03-13T15:53:45Z"
+		},
+		{
+			"checksumSHA1": "/WdMgkGk/U8GDFpFMSzZ/XuN8PE=",
+			"path": "github.com/asuleymanov/golos-go/transports",
+			"revision": "4a1e8d1c7a6e2009831ea7959b5db4e54ce30764",
+			"revisionTime": "2018-03-13T15:53:45Z"
+		},
+		{
+			"checksumSHA1": "tS6Ww7wa/4Jwof4zKJzprQWdCzE=",
+			"path": "github.com/asuleymanov/golos-go/transports/websocket",
+			"revision": "4a1e8d1c7a6e2009831ea7959b5db4e54ce30764",
+			"revisionTime": "2018-03-13T15:53:45Z"
+		},
+		{
+			"checksumSHA1": "h604aWuncMaw1v4mg61wonekuQ0=",
+			"path": "github.com/asuleymanov/golos-go/types",
+			"revision": "4a1e8d1c7a6e2009831ea7959b5db4e54ce30764",
+			"revisionTime": "2018-03-13T15:53:45Z"
+		},
+		{
+			"checksumSHA1": "Jy4znxe9BqwLQKPfLeMAw//g6Zc=",
+			"path": "github.com/asuleymanov/jsonrpc2",
+			"revision": "c1130263daf896b4d9acdc90cd37f05eb441d27b",
+			"revisionTime": "2017-12-05T09:38:03Z"
+		},
+		{
+			"checksumSHA1": "2Xlpe/IbgsdxTYlfLfuDQshvDIw=",
+			"path": "github.com/asuleymanov/jsonrpc2/websocket",
+			"revision": "c1130263daf896b4d9acdc90cd37f05eb441d27b",
+			"revisionTime": "2017-12-05T09:38:03Z"
+		},
+		{
+			"checksumSHA1": "mq7Np3rIjHnE06Of949JjXdU/Rk=",
+			"path": "github.com/btcsuite/btcd/btcec",
+			"revision": "2be2f12b358dc57d70b8f501b00be450192efbc3",
+			"revisionTime": "2018-02-20T00:36:29Z"
+		},
+		{
+			"checksumSHA1": "x8MiLYkRT+y3YudDz3Ms8V82WtA=",
+			"path": "github.com/btcsuite/btcd/chaincfg",
+			"revision": "2be2f12b358dc57d70b8f501b00be450192efbc3",
+			"revisionTime": "2018-02-20T00:36:29Z"
+		},
+		{
+			"checksumSHA1": "GmSJfFUhbXmiqjiEMbjKs4knqzA=",
+			"path": "github.com/btcsuite/btcd/chaincfg/chainhash",
+			"revision": "2be2f12b358dc57d70b8f501b00be450192efbc3",
+			"revisionTime": "2018-02-20T00:36:29Z"
+		},
+		{
+			"checksumSHA1": "h40q1aaRr76gs5lulcmuPJlAuZQ=",
+			"path": "github.com/btcsuite/btcd/wire",
+			"revision": "2be2f12b358dc57d70b8f501b00be450192efbc3",
+			"revisionTime": "2018-02-20T00:36:29Z"
+		},
+		{
+			"checksumSHA1": "rcHsr+etM1m5c2FngwV5vRe9VXA=",
+			"path": "github.com/btcsuite/btcutil",
+			"revision": "501929d3d046174c3d39f0ea54ece471aa17238c",
+			"revisionTime": "2017-07-02T00:39:31Z"
+		},
+		{
+			"checksumSHA1": "oQgLy8KmIOVov04WXH7KgU1bszc=",
+			"path": "github.com/btcsuite/btcutil/base58",
+			"revision": "501929d3d046174c3d39f0ea54ece471aa17238c",
+			"revisionTime": "2017-07-02T00:39:31Z"
+		},
+		{
+			"checksumSHA1": "BBnsAiKyNfocRwmEav5EJpVCwzk=",
+			"path": "github.com/btcsuite/btcutil/bech32",
+			"revision": "501929d3d046174c3d39f0ea54ece471aa17238c",
+			"revisionTime": "2017-07-02T00:39:31Z"
+		},
+		{
+			"checksumSHA1": "h4FKEw19jw7+Je5OwsISRKIGTm8=",
+			"path": "github.com/codegangsta/cli",
+			"revision": "8e01ec4cd3e2d84ab2fe90d8210528ffbb06d8ff",
+			"revisionTime": "2018-02-26T03:02:53Z"
+		},
+		{
+			"checksumSHA1": "CAo0j5Q4ZQ09hjIu3DTlBUR/kOs=",
+			"path": "github.com/googollee/go-engine.io",
+			"revision": "80ae0e43aca17b4c5a6834999d0f2eaa16b9afda",
+			"revisionTime": "2017-02-24T22:25:11Z"
+		},
+		{
+			"checksumSHA1": "Tv1/qmTmjl43MFulf61QbsGuu2c=",
+			"path": "github.com/googollee/go-engine.io/message",
+			"revision": "80ae0e43aca17b4c5a6834999d0f2eaa16b9afda",
+			"revisionTime": "2017-02-24T22:25:11Z"
+		},
+		{
+			"checksumSHA1": "Z3Zs8QiMD9WQdAnRNqyrfuElIxg=",
+			"path": "github.com/googollee/go-engine.io/parser",
+			"revision": "80ae0e43aca17b4c5a6834999d0f2eaa16b9afda",
+			"revisionTime": "2017-02-24T22:25:11Z"
+		},
+		{
+			"checksumSHA1": "Veyca3YORqrCpon9aIvt0CTB3JI=",
+			"path": "github.com/googollee/go-engine.io/polling",
+			"revision": "80ae0e43aca17b4c5a6834999d0f2eaa16b9afda",
+			"revisionTime": "2017-02-24T22:25:11Z"
+		},
+		{
+			"checksumSHA1": "WSC+XDEXrzu11rf+gv1Y2N7v/nE=",
+			"path": "github.com/googollee/go-engine.io/transport",
+			"revision": "80ae0e43aca17b4c5a6834999d0f2eaa16b9afda",
+			"revisionTime": "2017-02-24T22:25:11Z"
+		},
+		{
+			"checksumSHA1": "HKE4UBOwXdi/Qt48b0da4Z/ytSY=",
+			"path": "github.com/googollee/go-engine.io/websocket",
+			"revision": "80ae0e43aca17b4c5a6834999d0f2eaa16b9afda",
+			"revisionTime": "2017-02-24T22:25:11Z"
+		},
+		{
+			"checksumSHA1": "V6irnAeLCIoI9uONINNdvvlog3o=",
+			"path": "github.com/googollee/go-socket.io",
+			"revision": "5447e71f36d394766bf855d5714a487596809f0d",
+			"revisionTime": "2017-05-25T14:10:29Z",
+			"tree": true,
+			"version": "master",
+			"versionExact": "master"
+		},
+		{
+			"checksumSHA1": "+1LsRRZKa06yTFg/Tu5NCsyHxOA=",
+			"path": "github.com/gorilla/websocket",
+			"revision": "eb925808374e5ca90c83401a40d711dc08c0c0f6",
+			"revisionTime": "2018-03-06T18:15:48Z"
+		},
+		{
+			"checksumSHA1": "abKzFXAn0KDr5U+JON1ZgJ2lUtU=",
+			"path": "github.com/kr/logfmt",
+			"revision": "b84e30acd515aadc4b783ad4ff83aff3299bdfe0",
+			"revisionTime": "2014-02-26T03:06:59Z"
+		},
+		{
+			"checksumSHA1": "QzajnjIq3OjjZ9SpXgbkHaN5Lzw=",
+			"path": "github.com/micro/cli",
+			"revision": "3d2263bb092286dde294a31049c92665f8373820",
+			"revisionTime": "2016-04-06T21:54:05Z"
+		},
+		{
+			"checksumSHA1": "ljd3FhYRJ91cLZz3wsH9BQQ2JbA=",
+			"path": "github.com/pkg/errors",
+			"revision": "816c9085562cd7ee03e7f8188a1cfd942858cded",
+			"revisionTime": "2018-03-11T21:45:15Z"
+		},
+		{
+			"checksumSHA1": "TQoVgHqUD72/5ALzi9p5W3oyaug=",
+			"path": "golang.org/x/crypto/ripemd160",
+			"revision": "c4a91bd4f524f10d064139674cf55852e055ad01",
+			"revisionTime": "2018-03-13T19:10:02Z"
+		},
+		{
+			"checksumSHA1": "GtamqiJoL7PGHsN454AoffBFMa8=",
+			"path": "golang.org/x/net/context",
+			"revision": "892bf7b0c6e2f93b51166bf3882e50277fa5afc6",
+			"revisionTime": "2018-03-12T19:33:55Z"
+		},
+		{
+			"checksumSHA1": "t95/FNK2nGCx3e6IARbO7OrcCuY=",
+			"path": "gopkg.in/tomb.v2",
+			"revision": "d5d1b5820637886def9eef33e03a27a9f166942c",
+			"revisionTime": "2016-12-08T15:16:19Z"
+		},
+		{
+			"checksumSHA1": "AnKBN2Q4AWaSNb0JyINBQbnpxGM=",
+			"path": "gopkg.in/yaml.v2",
+			"revision": "7f97868eec74b32b0982dd158a51a446d1da7eb5",
+			"revisionTime": "2018-02-23T19:12:37Z"
+		}
+	],
+	"rootPath": "github.com/Appscrunch/Multy-Back-Golos"
+}
