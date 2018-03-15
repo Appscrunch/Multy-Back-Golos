@@ -1,2 +1,6 @@
 vendor/*/
 !vendor/vendor.json
+
+env-secret
+
+multy-golos

@@ -1,0 +1,28 @@
+version: '3.4'
+
+services:
+    api:
+        build: .
+        image: multyio/golos-back:v0.1
+        links:
+            - golos:golos-node
+        env_file:
+            - env-secret
+        environment:
+            - "MULTY_GOLOS_NET=golos"
+            - "MULTY_GOLOS_PORT=80"
+            - "MULTY_GOLOS_NODE=ws://golos-node:8090"
+        ports:
+            - "80"
+
+    golos:
+        image: multyio/golos:mainnet-0.16.4.1
+        env_file:
+            - env-secret
+        environment:
+            - "STEEMD_EXTRA_OPTS=--enable-stale-production"
+        expose:
+            - "8090"
+        ports:
+            - "8090"
+            - "2001"
