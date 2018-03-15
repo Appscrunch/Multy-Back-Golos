@@ -204,16 +204,18 @@
 			"revisionTime": "2014-02-26T03:06:59Z"
 		},
 		{
-			"checksumSHA1": "QzajnjIq3OjjZ9SpXgbkHaN5Lzw=",
-			"path": "github.com/micro/cli",
-			"revision": "3d2263bb092286dde294a31049c92665f8373820",
-			"revisionTime": "2016-04-06T21:54:05Z"
-		},
-		{
 			"checksumSHA1": "ljd3FhYRJ91cLZz3wsH9BQQ2JbA=",
 			"path": "github.com/pkg/errors",
 			"revision": "816c9085562cd7ee03e7f8188a1cfd942858cded",
 			"revisionTime": "2018-03-11T21:45:15Z"
+		},
+		{
+			"checksumSHA1": "wHJK2MbuCCBwndMy6qzRMCDuQ1E=",
+			"path": "github.com/urfave/cli",
+			"revision": "cfb38830724cc34fedffe9a2a29fb54fa9169cd1",
+			"revisionTime": "2017-08-11T01:42:03Z",
+			"version": "v1",
+			"versionExact": "v1.20.0"
 		},
 		{
 			"checksumSHA1": "TQoVgHqUD72/5ALzi9p5W3oyaug=",

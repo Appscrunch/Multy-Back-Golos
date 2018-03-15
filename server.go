@@ -10,10 +10,18 @@ import (
 	"github.com/Appscrunch/Multy-Back-Golos/api"
 
 	socketio "github.com/googollee/go-socket.io"
-	"github.com/micro/cli"
+	"github.com/urfave/cli"
+)
+
+var (
+	commit    string
+	branch    string
+	buildtime string
 )
 
 const (
+	VERSION = "v0.1"
+
 	ROOM                        = "golos"
 	EVENT_CONNECTION            = "connection"
 	EVENT_CREATE_ACCOUNT        = "account:create"
@@ -50,8 +58,8 @@ func errStr(err error) string {
 }
 
 // NewServer constructs new server handler
-func NewServer(endpoints []string, account, key string) (*Server, error) {
-	a, err := api.NewAPI(endpoints, account, key)
+func NewServer(endpoints []string, net, account, key string) (*Server, error) {
+	a, err := api.NewAPI(endpoints, net, account, key)
 	return &Server{a}, err
 }
 
@@ -178,11 +186,21 @@ func (s *Server) broadcastLoop(socket *socketio.Server) {
 	// TODO: graceful shutdown
 }
 
-func run(c *cli.Context) {
-	log.Println("run")
-	server, err := NewServer([]string{c.String("node")}, c.String("account"), c.String("key"))
+func run(c *cli.Context) error {
+	// check net arguement
+	net := c.String("net")
+	if net != "test" && net != "golos" {
+		return cli.NewExitError(fmt.Sprintf("net must be \"golos\" or \"test\": %s", net), 1)
+	}
+
+	server, err := NewServer(
+		[]string{c.String("node")},
+		c.String("net"),
+		c.String("account"),
+		c.String("key"),
+	)
 	if err != nil {
-		log.Fatal(err)
+		return cli.NewExitError(fmt.Sprintf("cannot init server: %s", err), 2)
 	}
 	log.Println("new server")
 
@@ -206,14 +224,14 @@ func run(c *cli.Context) {
 	hostport := fmt.Sprintf("%s:%s", c.String("host"), c.String("port"))
 	log.Println("Serving at", hostport)
 	go server.broadcastLoop(socket)
-	log.Fatal(http.ListenAndServe(hostport, nil))
+	return cli.NewExitError(http.ListenAndServe(hostport, nil), 3)
 }
 
 func main() {
 	app := cli.NewApp()
 	app.Name = "multy-golos"
 	app.Usage = `Golos node socket.io API for Multy backend`
-	app.Version = "v0.1"
+	app.Version = fmt.Sprintf("%s (commit: %s, branch: %s, buildtime: %s)", VERSION, commit, branch, buildtime)
 	app.Author = "vovapi"
 	app.Flags = []cli.Flag{
 		cli.StringFlag{

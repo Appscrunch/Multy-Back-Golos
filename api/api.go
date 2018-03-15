@@ -18,6 +18,26 @@ type API struct {
 	TrackedAddresses map[string]bool
 }
 
+// NewAPI initializes and validates new api struct
+func NewAPI(endpoints []string, net, account, key string) (*API, error) {
+	cli, err := client.NewClient(endpoints, net)
+	log.Println("new client")
+	if err != nil {
+		return nil, err
+	}
+	api := &API{
+		client:           cli,
+		account:          account,
+		activeKey:        key,
+		TrackedAddresses: make(map[string]bool),
+	}
+
+	client.Key_List[account] = client.Keys{
+		AKey: key,
+	}
+	return api, nil
+}
+
 // Balance is a struct of all available balances
 // basically it's a balance subset of database.Account struct
 type Balance struct {
@@ -238,24 +258,4 @@ func (api *API) processBalance(block *database.Block, balanceChan chan<- *Balanc
 		}
 	}
 	return
-}
-
-// NewAPI initializes and validates new api struct
-func NewAPI(endpoints []string, account, key string) (*API, error) {
-	cli, err := client.NewClient(endpoints, "test")
-	log.Println("new client")
-	if err != nil {
-		return nil, err
-	}
-	api := &API{
-		client:           cli,
-		account:          account,
-		activeKey:        key,
-		TrackedAddresses: make(map[string]bool),
-	}
-
-	client.Key_List[account] = client.Keys{
-		AKey: key,
-	}
-	return api, nil
 }
