@@ -1,0 +1,46 @@
+version: '3.4'
+
+services:
+    api:
+        build: ../..
+        image: multyio/golos-back:v0.1
+        links:
+            - golos-witness:golos-node
+        env_file:
+            - env.api.secret
+        environment:
+            - "MULTY_GOLOS_NET=golos"
+            - "MULTY_GOLOS_PORT=80"
+            - "MULTY_GOLOS_NODE=ws://golos-witness:8090"
+        ports:
+            - "80"
+
+    golos-seed:
+        image: multyio/golos:mainnet-0.16.4.1
+        environment:
+            - "STEEMD_P2P_ENDPOINT=0.0.0.0:2001"
+            - "STEEMD_EXTRA_OPTS=--enable-stale-production"
+        volumes:
+           - "./seed_chain_data:/var/lib/golosd" #For local
+        #expose:
+        #    - "8090"
+        ports:
+        #    - "8090"
+            - "2001"
+
+    golos-witness:
+        image: multyio/golos:mainnet-0.16.4.1
+        env_file:
+            - env.witness.secret
+        links:
+            - golos-seed:golos-seed
+        environment:
+            - "STEEMD_SEED_NODES=golos-seed:2001"
+            - "STEEMD_EXTRA_OPTS=--enable-stale-production"
+        volumes:
+           - "./witness_chain_data:/var/lib/golosd" #For local
+        expose:
+            - "8090"
+        ports:
+            - "8090"
+
