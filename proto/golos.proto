@@ -1,0 +1,109 @@
+syntax = "proto3";
+// based on https://github.com/Appscrunch/Multy-back/
+package proto;
+
+service NodeCommunications {
+    rpc EventGetHeadInfo (Empty) returns (HeadInfo);
+
+    rpc EventAccountCheck (AccountCheckRequest) returns (AccountCheckResponse);
+
+    rpc EventAccountCreate (AccountCreateRequest) returns (OkErrResponse);
+
+    rpc EventGetBalances (Accounts) returns (GetBalancesResponse);
+
+    rpc EventTrackAddresses (Accounts) returns (OkErrResponse);
+
+    rpc EventGetTrackedAddresses (Empty) returns (Accounts);
+
+    rpc EventSendTransactionJSON(TransactionJSON) returns (SendTransactionResponse);
+
+    rpc BalanceChanged (Empty) returns (stream Balance);
+
+    rpc NewBlock (Empty) returns (stream Block);
+}
+
+message OkErrResponse {
+	bool ok = 1;
+	string error = 2;
+}
+
+message AccountCheckRequest {
+	string name = 1;
+}
+
+message AccountCheckResponse {
+	bool exist = 1;
+	string error = 2;
+}
+
+message Accounts {
+	repeated string names = 1;
+}
+
+message Balance {
+    string name = 1;
+	string balance = 2;
+	string savings_balance = 3;
+	string sbd_balance = 4;
+	string savings_sbd_balance = 5;
+	string vesting_balance = 6;
+}
+
+message GetBalancesResponse {
+	repeated Balance balances = 1;
+	string error = 2;
+}
+
+message AccountCreateRequest {
+	string account = 1;
+	string owner = 2;
+	string active = 3;
+	string posting = 4;
+	string memo = 5;
+    string fee = 6; // Fee is "0.000 GOLOS" format
+}
+
+message BalancesChangedMessage {
+    repeated Balance balances = 1;
+}
+
+message GetTrackedAddressesResponse {
+	repeated string accounts = 1;
+	string error = 2;
+}
+
+message SendTransactionResponse {
+	bool ok = 1;
+	string error = 2;
+	string response = 3;
+}
+
+
+message Block {
+    uint32 height = 1;
+    int64 time = 2;
+
+    message Transaction { // block has transactions
+        uint32 ref_block_num = 1;
+        uint32 ref_block_prefix = 2;
+        int64 expiration = 3;
+
+        string operations = 4; // IDK how to do variable types for various operations
+        repeated string signatures = 6;
+    }
+
+    repeated Transaction transactions = 3;
+}
+
+message HeadInfo {
+    uint32 height = 1;
+    string id = 2; // block id has block hash prefix in it
+}
+
+message Empty {
+
+}
+
+message TransactionJSON {
+    string json = 1;
+}

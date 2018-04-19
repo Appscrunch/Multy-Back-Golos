@@ -8,3 +8,5 @@ docker/*/*chain_data/*
 !docker/*/*chain_data/snapshot5392323.json
 
 multy-golos
+
+.idea/
